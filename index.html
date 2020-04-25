@@ -287,22 +287,26 @@ if(isset($_POST['submit'])){
                     <h3 style="margin-left: 2.5rem; margin-top: -1.6rem;"> Contact Me</h3>
                     <h2>Get In Touch</h2>
                 </div>
- 
+
                 <div class="row">
                     <div class="col-md-8">
                         <form action="" method="POST" class="contact-form">
                             <h5 class="text-center text-danger"> <?php $result; ?> </h5>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Enter Your Name" name="name" required>
+                                <input type="text" class="form-control" placeholder="Enter Your Name" name="name"
+                                    required>
                             </div>
                             <div class="form-group">
-                                <input type="email" class="form-control" placeholder="Enter Your Email" name="email" required>
+                                <input type="email" class="form-control" placeholder="Enter Your Email" name="email"
+                                    required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" placeholder=" Enter Subject" name="subject" required>
+                                <input type="text" class="form-control" placeholder=" Enter Subject" name="subject"
+                                    required>
                             </div>
                             <div class="form-group">
-                                <textarea name="message" id="" rows="5" class="form-control" placeholder="How can i help you?" required></textarea>
+                                <textarea name="message" id="" rows="5" class="form-control"
+                                    placeholder="How can i help you?" required></textarea>
                             </div>
                             <button type="submit" class="btn">
                                 Send Message
@@ -395,8 +399,8 @@ if(isset($_POST['submit'])){
 
     <!-- Preloader -->
     <div class="loader">
-    <img src="382 (1).gif" alt="Loading...">
-</div>   
+        <img src="382 (1).gif" alt="Loading...">
+    </div>
 
 
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
@@ -429,7 +433,7 @@ if(isset($_POST['submit'])){
             setTimeout(function () {
                 $(".background").fadeIn();
                 $(".loader").hide();
-            },3000)
+            }, 3000)
         })
 
         (function () {
@@ -443,7 +447,8 @@ if(isset($_POST['submit'])){
 
                 section.each(function () {
                     var self = $(this);
-                    if (self.offset().top < (currentScrollPos + navH) && (currentScrollPos + navH) < (self.offset().top + self.outerHeight())) {
+                    if (self.offset().top < (currentScrollPos + navH) && (currentScrollPos + navH) <
+                        (self.offset().top + self.outerHeight())) {
                         var targetClass = '.' + self.attr('class') + '-link';
                         navLinks.removeClass('active');
                         $(targetClass).addClass('actve');
