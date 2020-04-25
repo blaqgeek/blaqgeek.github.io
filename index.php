@@ -1,4 +1,4 @@
-<!-- <?php 
+<?php 
 
 $result = " ";
 if(isset($_POST['submit'])){
@@ -29,7 +29,7 @@ if(isset($_POST['submit'])){
 }
 
 
-?> -->
+?>
 
 
 
@@ -423,14 +423,14 @@ if(isset($_POST['submit'])){
         });
 
         // Pre-loader
-        // $(".background").hide();
+        $(".background").hide();
 
-        // $(window).load(function () {
-        //     setTimeout(function () {
-        //         $(".background").fadeIn();
-        //         $(".loader").hide();
-        //     },3000)
-        // })
+        $(window).load(function () {
+            setTimeout(function () {
+                $(".background").fadeIn();
+                $(".loader").hide();
+            },3000)
+        })
 
         (function () {
             var navLinks = $('nav ul li a'),
