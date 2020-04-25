@@ -629,8 +629,12 @@ button.btn:hover i {
     }
 
     .abt-btns {
+        display: flex;
+        flex-direction: row;
         text-align: center;
     }
+
+    .
 
     /******  Contact section *******/
     .contact-boxes {
@@ -645,7 +649,13 @@ button.btn:hover i {
     .social-icons {
         justify-content: center;
         left: -25px;
-        top: -35px;
+        top: -70px;
+    }
+
+    .social-icons .icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
     }
 
     .footer {
