@@ -1,0 +1,473 @@
+<?php 
+
+$result = " ";
+if(isset($_POST['submit'])){
+    require './php_mailer/PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+
+    $mail->Host = 'smtp.gmail.com';
+    $mail->Port = 587;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tis';
+    $mail->Username = 'blaqgeek1@gmail.com';
+    $mail->Password = '0549808938';
+
+    $mail->setFrom($_POST['email'],$_POST['name']);
+    $mail->addAddress('blaqgeek1@gmail.com');
+    $mail->addReplyTo($_POST['email'],$_POST['name']);
+
+    $mail->isHTML(true);
+    $mail->Subject='Form Submission: ' .$_POST['subject'];
+    $mail->Body='<h1 align=center> Name: '.$_POST['name'].'<br> Email: '.$_POST['email'] .'<br> Message: '.$_POST['message'].  '</h1>'; 
+
+    if(!$mail->send()){
+        $result = "Something went wrong. Please try again.";
+    }
+    else {
+        $result = "Thanks ".$_POST['name']." for contacting me. I'll get back to you soon!"; 
+    }
+}
+
+
+?>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> myWebsite</title>
+
+    <!-- Font Awesome  -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+
+    <!-- aos -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Normal style link -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+    <div class=" background">
+        <header class="fix">
+            <div class="container">
+                <a href="" class="logo"> Blaq <span class="logo-span"> Geek.</span> </a>
+                <div class=" btn-mobile-menu menu-toggle"></div>
+                <nav>
+                    <ul>
+                        <li><a href="#home" class="nav-link">Home</a></li>
+                        <li><a href="#about" class="nav-link">About</a></li>
+                        <li><a href="#services" class="nav-link">Services</a></li>
+                        <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                        <li><a href="#contact" class="nav-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+
+        <!--  Hero section  -->
+        <section class="hero" id="home">
+            <video loop muted defaultmuted autoplay playsinline class="video-background">
+                <source src="./video/backVideo.mp4" type="video/mp4">
+            </video>
+            <div class="container">
+                <div id="hero-txt">
+                    <p> Hello </p>
+                    <h1> I'm Godfred Yeleboue <br> <span class="typed-words"></span> </h1>
+                    <a href="" class="btn">Hire me</a>
+                </div>
+            </div> <!-- End of container -->
+        </section> <!-- End of hero section -->
+
+        <!-- About section -->
+        <section class="page-section about" id="about">
+            <div class="container">
+                <div class="row p-3">
+                    <div class="col-lg-5 col-md-6 img-responsive img-thumbnail img-abt">
+
+                    </div>
+
+                    <div class="col-lg-7 col-md-6 cont-abt">
+                        <hr class="divider" style="margin-left: 0.2rem; margin-top: 0.25rem;">
+                        <h3 style="margin-left: 2.5rem; margin-top: -1.6rem;">About Me</h3>
+                        <h2>Who Am I</h2>
+                        <div class="abt-p">
+                            <p> I'm a technologist and a geek whose allure for computers is evident in my existence.
+                                <br>
+                                Yeleboue Godfred is a student at University of Energy and Natural Resources (UENR)
+                                located
+                                in Sunyani studying BSc Computer Science. </p>
+                            <p>I'm a Full Stack Developer based in Techiman,Ghana and i'm very passionate and dedicated
+                                to
+                                learning and coding because i believe we could change the world through Technology and
+                                Information. </p>
+
+                        </div>
+
+                        <!-- Skills -->
+                        <div class="skills">
+                            <div class="row">
+                                <div class="col-sm-4 col-xs-4 skills-xs">
+                                    <div class="skills-inner">
+                                        <h4>Html5</h4>
+                                        <p>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-empty"></i>
+                                        </p>
+                                    </div>
+
+                                    <div class="skills-inner">
+                                        <h4>Css3</h4>
+                                        <p>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-empty"></i>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 col-xs-4 skills-xs">
+                                    <div class="skills-inner">
+                                        <h4>Javascript</h4>
+                                        <p>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </p>
+                                    </div>
+
+                                    <div class="skills-inner">
+                                        <h4>JQuery</h4>
+                                        <p>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-4 col-xs-4 skills-xs">
+                                    <div class="skills-inner">
+                                        <h4>PHP</h4>
+                                        <p>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-half-empty"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </p>
+                                    </div>
+
+                                    <div class="skills-inner">
+                                        <h4>MySQL</h4>
+                                        <p>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star-o"></i>
+                                        </p>
+                                    </div>
+                                </div>
+
+                            </div> <!-- End of Row -->
+                        </div> <!-- End of skills -->
+
+                        <div class="abt-btns">
+                            <a href="" class="btn-abt cv">Download Cv</a>
+                            <a href="#contact" class="btn-abt hire">Hire me</a>
+                        </div>
+
+                    </div>
+                </div> <!--  End of row-->
+            </div> <!-- End of Container -->
+        </section> <!-- End of About section -->
+
+
+        <!-- Services section -->
+        <section class="page-section services" id="services">
+            <div class="container">
+                <div class="main-title">
+                    <hr class="divider" style="margin-left: 0.2rem; margin-top: 0.25rem;">
+                    <h3 style="margin-left: 2.5rem; margin-top: -1.6rem;"> My Services</h3>
+                    <h2>What Can I Do</h2>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service">
+                            <div class="service-icon">
+                                <i class="fa fa-pencil fa-lg"></i>
+                            </div>
+                            <h4> Creative Design </h4>
+                            <p> I help companies, schools and institutions with innovative and great designs that suits
+                                their brand. </p>
+                        </div>
+
+                        <div class="service">
+                            <div class="service-icon">
+                                <i class="fa fa-mobile fa-lg"></i>
+                            </div>
+                            <h4> Mobile App Development </h4>
+                            <p> I develop mobile apps for businesses and brands to boost their credibility and promote
+                                their business. </p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service">
+                            <div class="service-icon">
+                                <i class="fa fa-flag fa-lg"></i>
+                            </div>
+                            <h4> Branding </h4>
+                            <p>I help big companies communicate like small companies. By integrating all of their
+                                current communication and reporting systems.</p>
+                        </div>
+
+                        <div class="service">
+                            <div class="service-icon">
+                                <i class="fa fa-code fa-lg"></i>
+                            </div>
+                            <h4> Clean Code </h4>
+                            <p> I write beautiful and clean codes used for software development and problem solving in
+                                the society.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                        <div class="service">
+                            <div class="service-icon">
+                                <i class="fa fa-laptop fa-lg"></i>
+                            </div>
+                            <h4> Web Development </h4>
+                            <p> I design and develop professional websites for schools, businesses and companies to
+                                boost their credibility and promote brand. </p>
+                        </div>
+
+                        <div class="service">
+                            <div class="service-icon">
+                                <i class="fa fa-support fa-lg"></i>
+                            </div>
+                            <h4> Fast Support </h4>
+                            <p>It is a big problem when your staff isn’t able to access email, or when a critical system
+                                isn’t working. I am ready and responsive when you need me most.</p>
+                        </div>
+                    </div>
+                </div> <!-- End of Row -->
+            </div> <!-- End of container -->
+        </section> <!-- End of services section -->
+
+
+        <!-- Contact section -->
+        <section class="page-section contact" id="contact">
+            <div class="container">
+                <div class="main-title">
+                    <hr class="divider" style="margin-left: 0.2rem; margin-top: 0.25rem;">
+                    <h3 style="margin-left: 2.5rem; margin-top: -1.6rem;"> Contact Me</h3>
+                    <h2>Get In Touch</h2>
+                </div>
+ 
+                <div class="row">
+                    <div class="col-md-8">
+                        <form action="" method="POST" class="contact-form">
+                            <h5 class="text-center text-danger"> <?php $result; ?> </h5>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Enter Your Name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" class="form-control" placeholder="Enter Your Email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder=" Enter Subject" name="subject" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" id="" rows="5" class="form-control" placeholder="How can i help you?" required></textarea>
+                            </div>
+                            <button type="submit" class="btn">
+                                Send Message
+                                <i class="fa fa-long-arrow-right"></i>
+                            </button>
+                        </form> <!-- End of form -->
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="contact-boxes">
+                            <div class="contact-box">
+                                <span class="icon-box">
+                                    <i class="fa fa-map-marker"></i>
+                                    <hr class="divider1" style="margin-right: -16px; margin-top: -19px;">
+                                </span>
+
+                                <h4 class="title-box">Location</h4>
+                                <div class="content-box">
+                                    <p>Techiman - Bono East.</p>
+                                    <p>West African, Ghana.</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-box">
+                                <span class="icon-box">
+                                    <i class="fa far fa-envelope"></i>
+                                    <hr class="divider1" style="margin-right: -16px; margin-top: -19px;">
+                                </span>
+
+                                <h4 class="title-box">Email</h4>
+                                <div class="content-box">
+                                    <p>godfredyeleboue@gmail.com</p>
+                                    <p>blaqgeek1@gmail.com</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-box">
+                                <span class="icon-box">
+                                    <i class="fa fa-phone"></i>
+                                    <hr class="divider1" style="margin-right: -16px; margin-top: -19px;">
+                                </span>
+
+                                <h4 class="title-box">Phone</h4>
+                                <div class="content-box">
+                                    <p> +233 54 980 8938 </p>
+                                    <p> +233 27 223 0224 </p>
+                                </div>
+                            </div>
+                        </div> <!-- End of contact boxes -->
+                    </div> <!-- End of col-md-4 -->
+
+                </div> <!-- End of row -->
+            </div> <!-- End of container -->
+        </section>
+
+        <section class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 copyright-text">
+                        <p> Copyright &copy; <script>
+                                document.write(new Date().getFullYear());
+                            </script> | <a href="#home" id="name">Blaq Geek</a> | All rights reserved. </p>
+                    </div>
+
+                    <div class="col-md-6 social-icons">
+                        <ul>
+                            <li class="icon fb-icon">
+                                <a href="https://facebook.com/Citizen Evangelist/"> <i class="fa fab fa-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="icon twitter-icon">
+                                <a href="https://twitter.com/iamdegeek/"> <i class="fa fab fa-twitter"></i> </a>
+                            </li>
+                            <li class="icon instagram-icon">
+                                <a href="https://instagram.com/citizenblaq_"> <i class="fa fab fa-instagram "></i> </a>
+                            </li>
+                            <li class="icon linkedin-icon">
+                                <a href="https://www.linkedin.com/in/yeleboue-godfred-35382816b/"> <i
+                                        class="fa fab fab fa-linkedin "></i> </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div> <!-- End of background  -->
+
+
+    <!-- Preloader -->
+    <!-- <div class="loader">
+    <img src="./img/382 (1).gif" alt="Loading...">
+</div>    End of preloader -->
+
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="./js/jquery-ui.js"></script>
+    <script src="./js/popper.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+
+    <script src="./js/aos.js"></script>
+
+    <script src="./js/typed.js"></script>
+
+    <script type="text/javascript">
+        var typed = new Typed('.typed-words', {
+            strings: ["a programmer.", "a web designer.", "a web developer.", "and a student."],
+            typeSpeed: 80,
+            backSpeed: 80,
+            backDelay: 2500,
+            startDelay: 800,
+            loop: true,
+            showCursor: true
+        });
+
+        // Pre-loader
+        // $(".background").hide();
+
+        // $(window).load(function () {
+        //     setTimeout(function () {
+        //         $(".background").fadeIn();
+        //         $(".loader").hide();
+        //     },3000)
+        // })
+
+        (function () {
+            var navLinks = $('nav ul li a'),
+                navH = $('nav').height(),
+                section = $('section'),
+                documentEl = $(document);
+
+            documentEl.on('scroll', function () {
+                var currentScrollPos = documentEl.scrollTop();
+
+                section.each(function () {
+                    var self = $(this);
+                    if (self.offset().top < (currentScrollPos + navH) && (currentScrollPos + navH) < (self.offset().top + self.outerHeight())) {
+                        var targetClass = '.' + self.attr('class') + '-link';
+                        navLinks.removeClass('active');
+                        $(targetClass).addClass('actve');
+                    }
+                });
+            });
+
+
+
+
+        })();
+    </script>
+
+    <script src="./js/main.js"></script>
+
+
+
+
+
+
+
+</body>
+
+
+
+
+</html>
