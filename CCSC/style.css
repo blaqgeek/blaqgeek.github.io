@@ -60,6 +60,10 @@ body {
   }
 }
 
+.carousel-item img {
+  height: 650px;
+}
+
 
 
 /* Navigation section */
@@ -449,6 +453,10 @@ aside {
     padding: 0.5rem 1.3rem;
   
   } 
+
+  .carousel-item img {
+    height: 400px;
+  }
  
   #menu {
     
@@ -522,23 +530,28 @@ aside {
   
 .home-intro {
    
-    padding: 25vh 0;
+    padding: 12vh 0;
     color: #fff;
     text-align: center;
     font-family: 'Raleway', sans-serif;
   }
 
   .home-intro h1 {
-      font-size: 1.8em;
+      font-size: 1.3em;
   }
   
   .home-intro p {
-      font-size: 1.3em;
+      font-size: 0.8em;
+      margin-bottom: 3vh;
   }
 
   .home-intro a {
-      font-size: 1em;
+      font-size: 0.9em;
   }
+
+  .btn-cnt {
+    padding: 10px 12px;
+  } 
 
   .contact {
     width: 100%;
