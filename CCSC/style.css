@@ -454,6 +454,9 @@ aside {
   
   } 
 
+  .carousel-item img {
+    height: 600px;
+  }
  
   #menu {
     
@@ -546,9 +549,6 @@ aside {
       font-size: 0.9em;
   }
 
-  .btn-cnt {
-    padding: 10px 15px;
-  } 
 
   .contact {
     width: 100%;
