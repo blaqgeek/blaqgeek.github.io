@@ -4,6 +4,10 @@
   padding: 8rem 5rem;
 }
 
+.page-section1 {
+  padding: 5rem 1.3rem;
+}
+
 .page-section h1 {
   font-weight: bold;
 }
@@ -455,7 +459,7 @@ aside {
   } 
 
   .carousel-item img {
-    height: 600px;
+    height: 400px;
   }
  
   #menu {
@@ -528,13 +532,13 @@ aside {
   }
 
   
-/* .home-intro {
+.home-intro {
    
     padding: 12vh 0;
     color: #fff;
     text-align: center;
     font-family: 'Raleway', sans-serif;
-  } */
+  }
 
   .home-intro h1 {
       font-size: 1.3em;
