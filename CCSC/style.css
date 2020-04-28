@@ -454,9 +454,6 @@ aside {
   
   } 
 
-  .carousel-item img {
-    height: 400px;
-  }
  
   #menu {
     
@@ -550,7 +547,7 @@ aside {
   }
 
   .btn-cnt {
-    padding: 10px 12px;
+    padding: 10px 15px;
   } 
 
   .contact {
