@@ -215,14 +215,28 @@ nav ul li a.active {
     background-color: #f4f5f9;
 }
 
-.img-abt {
-    padding: 50px;
+/* .img-abt {
+    
     border: 2px solid #10151d;
     background-image: url(./1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     height: 500px;
+} */
+
+.img-abt img {
+   
+    background-size: cover;
+    display: block;
+    border: 2px solid #10151d;
+    padding: 7px;
+    height: 500px;
+    width: 360px;
+    margin-left: -50px;
+    margin-top: -10px;
+    
+
 }
 
 
@@ -622,6 +636,10 @@ button.btn:hover i {
         margin-bottom: 3rem;
     }
 
+    .img-abt img {
+        width: 310px;
+    }
+    
     .skills-inner {
         text-align: center;
     }
