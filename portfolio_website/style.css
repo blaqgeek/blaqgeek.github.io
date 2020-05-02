@@ -218,9 +218,6 @@ nav ul li a.active {
 .img-abt {
     padding: 7px;
     border: 2px solid #10151d;
-    background-image: url(1.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
     height: 500px;
 }
 
