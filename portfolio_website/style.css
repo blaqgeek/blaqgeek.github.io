@@ -216,7 +216,7 @@ nav ul li a.active {
 }
 
 .img-abt {
-    background-image: url(1.jpg);
+    background-image: url(../img/1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 500px;
@@ -455,7 +455,7 @@ button.btn:hover i {
 .footer {
     display: block;
     background-color: #0c101b;
-    height: 60px;
+    height: 62px;
     padding: 20px 0; 
 }
 
@@ -634,8 +634,6 @@ button.btn:hover i {
         text-align: center;
     }
 
-    .
-
     /******  Contact section *******/
     .contact-boxes {
         margin-top: 50px;
@@ -643,13 +641,13 @@ button.btn:hover i {
 
     .copyright-text {
        text-align: center;
-       bottom: -40px;
+       bottom: -47px;
     }
 
     .social-icons {
         justify-content: center;
         left: -25px;
-        top: -70px;
+        top: -65px;
     }
 
     .social-icons .icon {
@@ -659,7 +657,7 @@ button.btn:hover i {
     }
 
     .footer {
-        height: 120px;
+        height: 135px;
     }
 
     
