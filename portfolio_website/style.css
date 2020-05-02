@@ -218,6 +218,7 @@ nav ul li a.active {
 .img-abt {
     padding: 7px;
     border: 2px solid #10151d;
+    display: block;
     height: 500px;
 }
 
