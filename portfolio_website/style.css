@@ -637,9 +637,10 @@ button.btn:hover i {
     }
 
     .img-abt img {
-        width: 310px;
+        margin-left: -35px;
+        width: 300px;
     }
-    
+
     .skills-inner {
         text-align: center;
     }
