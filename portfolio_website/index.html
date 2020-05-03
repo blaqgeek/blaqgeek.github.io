@@ -366,9 +366,10 @@ if(isset($_POST['submit'])){
             <div class="container">
                 <div class="row">
                     <div class="col-md-6 copyright-text">
-                        <p> Copyright &copy; <script>
-                                document.write(new Date().getFullYear());
-                            </script> | <a href="#home" id="name">Blaq Geek</a> | All rights reserved. </p>
+                        <p> 
+                            Copyright <a href="#home" id="name">Blaq Geek</a> &copy; 
+                            <script> document.write(new Date().getFullYear()); </script> | All rights reserved.
+                        </p>
                     </div>
 
                     <div class="col-md-6 social-icons">
@@ -433,7 +434,7 @@ if(isset($_POST['submit'])){
             setTimeout(function () {
                 $(".background").fadeIn(2000);
                 $(".loader").hide();
-            } )
+            })
         })
 
         (function () {
