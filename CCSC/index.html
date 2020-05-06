@@ -49,7 +49,340 @@ if (isset($_POST['submit'])) {
     <link rel="stylesheet" href="bootstrap.min.css">
     <link rel="stylesheet" href="all.min.css">
 </head>
+<!-- <?php
 
+$result = " ";
+if (isset($_POST['submit'])) {
+    require 'php_mailer/PHPMailerAutoload.php';
+    $mail = new PHPMailer;
+
+    $mail->Host = 'stmp.gmail.com';
+    $mail->Port = 587;
+    $mail->SMTPAuth = true;
+    $mail->SMTPSecure = 'tls';
+    $mail->Username = 'godfredyeleboue@gmail.com';
+    $mail->Password = '0549808938';
+
+    $mail->setFrom($_POST['email'], $_POST['name']);
+    $mail->addAddress('kumiduodu@hotmail.com');
+    $mail->addReplyTo($_POST['email'], $_POST['name']);
+
+    $mail->isHTML(true);
+    $mail->Subject = 'Form Submission: New Message from ' . $_POST['name'];
+    $mail->Body = ' <h1 align=center> Name: ' . $_POST['name'] . ' <br> Email: ' . $_POST['email'] . '<br> Message: ' . $_POST['message'] . '</h1>';
+
+    if (!$mail->send()) {
+        $result = "Something went wrong. Please try again.";
+    } else {
+        $result = " Thanks " . $_POST['name'] . " for contacting us. We'll get back to you soon! ";
+    }
+}
+
+?>
+ -->
+
+
+ <!DOCTYPE html>
+ <html lang="en">
+ 
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>CCSC | Raising and Equiping Champions</title>
+     <link rel="shortcut icon" type="image/png" href="./images/favicon.jpg">
+ 
+     <link rel="stylesheet" href="./css/style.css">
+     <link href="https://fonts.googleapis.com/css?family=Poppins|Sen&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
+     <link href="https://fonts.googleapis.com/css?family=Livvic|Manjari&display=swap" rel="stylesheet">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <link rel="stylesheet" href="./fontawesome-free-5.10.1-web/css/all.min.css ">
+ </head>
+ 
+ <body>
+ 
+     <div class="header">
+         <a href="#carouselExampleCaptions" class="logo" aria-label="homepage"> Champions  <span> Community School Complex. </span>  </a>
+         <nav class="main-nav">
+             <div id="menu" onclick="onClickMenu()">
+                 <div id="bar1" class="bar"></div>
+                 <div id="bar2" class="bar"></div>
+                 <div id="bar3" class="bar"></div>
+             </div>
+             <ul class="nav-list" id="nav">
+                 <li> <a href="#carouselExampleCaptions" class="nav-link">Home</a> </li>
+                 <li> <a href="#about" class="nav-link">About</a> </li>
+                 <li> <a href="#gallary" class="nav-link">Gallary</a> </li>
+                 <li> <a href="#contact" class="nav-link">Contact</a> </li>
+             </ul>
+         </nav>
+         <div class="menu-bg" id="menu-bg"></div>
+     </div>
+ 
+     <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-ride="carousel">
+         <ol class="carousel-indicators">
+             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+             <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+            
+         </ol>
+         <div class="carousel-inner" id="gradient">
+             <div class="carousel-item active">
+                 <img src="./images/header.JPG" height="650px" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-md-block">
+                     <section class="home-intro">
+                         <h1> Welcome to <span class="color-change">Champions Community School. </span> </h1>
+                         <p class="para"> A place for <strong>raising</strong> and <strong>equiping</strong> champions.
+                         </p>
+                         <a href="#what_we_do" class="btn-cnt"> Know what we do</a>
+                     </section>
+                 </div>
+             </div>
+             <div class="carousel-item">
+                 <img src="./images/header2.JPG" height="650px" class="d-block w-100" alt="...">
+                 <div class="carousel-caption d-md-block">
+                     <section class="home-intro">
+                         <h1> Welcome to <span class="color-change">Champions Community School. </span> </h1>
+                         <p class="para"> A place for <strong>raising</strong> and <strong>equiping</strong> champions.
+                         </p>
+                         <a href="#gallary" class="btn-cnt"> View Gallery</a>
+                     </section>
+                 </div>
+             </div>
+            
+         </div>
+         
+     </div>
+ 
+ 
+     <div class="main">
+         <!------  About Section ------>
+         <section class="home-about page-section" id="about">
+             <div class="row p-3">
+                 <div class="col-md-12">
+                     <h1> About us </h1>
+                     <hr class="divider" style=" margin-left: 0.5vh; ">
+                 </div>
+                 <div class="col-md-8 cont-abt">
+                    
+                     <p> Champions Community School Complex has been the branchild of Evangelist Kumi Duodu for many
+                         years.
+                         The concept of CCSC comes from the innate drive to help others who are: vulnerable, abandoned
+                         and
+                         been dubbed,"a burden to society". </p>
+                     <p> Champions Community School Complex is a ministry of House of Champions Ministries (Champions
+                         Community Chapel) and operates under the authority of the church Mission-the Education Council,
+                         which is also under authority of the church. The school is guided by and transforms in general
+                         to
+                         the doctrine and practice of the church. </p>
+                     <p> We envision Champions Community School Complex graduates who have a Biblical worldview that
+                         encompasses all of life and who are equipped and eager to take their place as servant leaders in
+                         the
+                         world. As classically educated men and women, CCSC graduates will possess broad knowledge, true
+                         wisdom, a capacity for clear reasoning, and the ability to communicate truth persuasively. In
+                         every
+                         area of life, they will recognize, appreciate, and spread truth, goodness, and beauty to the
+                         glory
+                         of God. </p>
+ 
+                 </div>
+ 
+                 <div class="col-md-4">
+                     <img src="./images/pic1.jpg" width="400px" height="450px" alt="">
+                 </div>
+             </div>
+         </section>  <!------  End of About section ------>
+ 
+ 
+         <!------ What_we_do Section ------>
+         <section class="orphanage page-section" id="what_we_do">
+             <h1> What we do</h1>
+             <hr class="divider" style=" margin-left: 0.9rem; ">
+ 
+             <div class="orphanage-col" id="what_we_do">
+                 <div class="col" id="col1">
+                     <h2> Feeding</h2>
+                     <p> All OVCs need food to function effectively. The major drive of most street orphans and orphans
+                         in labour is basically on how to acquire one or two square meals daily. HCM provides free
+                         feeding to our consumers to offload that burden to strongly position their focus in the main
+                         areas of human development for sustainablelife. HCM has a canteen service that cooks and serves
+                         all consumers nutritious meals to support their strength. </p>
+ 
+                 </div>
+                 <div class="col" id="col2">
+                     <h2>Clothing</h2>
+                     <p> HCM provides clothes to our consumers. These include those that would be used daily, uniforms
+                         for school, clothes for church service, sport wear and night wear. </p>
+                 </div>
+                 <div class="col" id="col3">
+                     <h2>Housing</h2>
+                     <p> All OVCs admitted into the education stream are given full housing facility. This is a dormitory
+                         constructed on the premises of the educational complex to facilitate easy movement of consumers
+                         to and from their needed post. </p>
+ 
+                 </div>
+             </div>
+ 
+         </section>  <!------  End of What_we_do section ------>
+ 
+ 
+         <!-- Gallary -->
+         <section  id="gallary">
+             <div class="page-gallary">
+                 <h1> Gallary</h1>
+                 <hr class="divider" style=" margin-left: 0.4rem; ">
+             </div>
+             <div class="row no-gutters">
+ 
+                 <div class="col-md-4 col-sm-6 m-0">
+                     <img alt="Gallary Pic 1" class="w-100 img-fluid" src="./images/1.jpg">
+                     <div class="portfolio-caption">
+                         <div class="project-category text-white-50">
+                             <h5>  INFRASTRUCTURE</h5>
+                         </div>
+                         <div class="project-name">
+                            Front view of School Building.
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="col-md-4 col-sm-6 m-0">
+                     <img alt="Gallary Pic 1" class="w-100 img-fluid" src="./images/2.jpg">
+                     <div class="portfolio-caption">
+                         <div class="project-category text-white-50">
+                             <h5>SOCIALIZATION</h5>
+                         </div>
+                         <div class="project-name">
+                            Children without parents.
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="col-md-4 col-sm-6 m-0">
+                     <img alt="Gallary Pic 1" class="w-100 img-fluid" src="./images/3.jpg">
+                     <div class="portfolio-caption">
+                         <div class="project-category text-white-50">
+                            <h5> Entertainment</h5>
+                         </div>
+                         <div class="project-name">
+                             Child having a party with parent.
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="col-md-4 col-sm-6 m-0">
+                     <img alt="Gallary Pic 1" class="w-100 img-fluid" src="./images/4.jpg">
+                     <div class="portfolio-caption">
+                         <div class="project-category text-white-50">
+                             <h5>SOCIALIZATION</h5>
+                         </div>
+                         <div class="project-name">
+                            The special students.
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="col-md-4 col-sm-6 m-0">
+                     <img alt="Gallary Pic 1" class="w-100 img-fluid" src="./images/5.JPG">
+                     <div class="portfolio-caption">
+                         <div class="project-category text-white-50">
+                             <h5> ACADEMIA </h5>
+                         </div>
+                         <div class="project-name">
+                             Information Communication Technology Lab.
+                         </div>
+                     </div>
+                 </div>
+ 
+                 <div class="col-md-4 col-sm-6 m-0">
+                     <img alt="Gallary Pic 1" class="w-100 img-fluid" src="./images/6.JPG">
+                     <div class="portfolio-caption">
+                         <div class="project-category text-white-50">
+                                 <h5> ACADEMIA </h5>
+                         </div>
+                         <div class="project-name">
+                             Pupil in class.
+                         </div>
+                     </div>
+                 </div>
+ 
+             </div>
+ 
+ 
+         </section>  <!------  End of Gallary section ------>
+ 
+ 
+         <!------ Contact section ------>
+         <section class="contact-page page-section" id="contact">
+ 
+             <form action="#contact" class="contact" method="post">
+ 
+                 <h1>Get in touch</h1>
+                 <hr class="divider" style=" margin-left: 0.4rem; margin-bottom: 2rem; ">
+                 <h5 class="text-success"> <?php $result; ?> </h5>
+                 <div>
+                     <input type="text" name="name" placeholder="NAME" class="frm vim" required> <br>
+                 </div>
+                 <div>
+                     <input type="email" name="email" placeholder="EMAIL ADDRESS" class="frm vim fit" required> <br>
+                 </div>
+                 <div>
+                     <textarea placeholder="MESSAGE" name="message" id="txt" cols="30" rows="7" class="frm sit"
+                         required></textarea>
+                 </div>
+                 <button type="submit" name="submit" class="button_1"> Submit</button>
+             </form>
+ 
+             <aside id="sidebar">
+                 <h3>MORE INFO</h3>
+                 <p class="pis"> <strong> Address: </strong>  Kutre 1 - Berekum.  </p>
+                 <p class="pia">West Africa, Ghana.</p>
+                 <div class="space1"></div>
+                 <p class="pis"><strong>GPS: </strong> BB-031-0980 </p>
+                 <p class="pis"><strong> Phone: </strong> +233207102707</p>
+                 <p class="pi"> +233542754058 </p>
+                 <p class="pi"> +233247829666 </p>
+                 <div class="space1"></div>
+                 <p class="pis"> <strong>Email: </strong> info@ccsch.org</p>
+                 <ul>
+                     <li> <a href=""> <img src="./images/facebook_48px.png" alt="facebook"> </a> </li>
+                     <li> <a href=""> <img src="./images/twitter_squared_48px.png" alt="twitter"> </a> </li>
+                     <li> <a href=""> <img src="./images/instagram_new_48px.png" alt="instagram"> </a> </li>
+                 </ul>
+ 
+             </aside>
+ 
+         </section>   <!------  End of Contact section ------>
+ 
+         
+         <div class="footer">
+             <p id="p-txt"> &copy; 2020 CCSC, All rights reserved. </p>
+         </div>
+ 
+     </div>
+ 
+     <!-- Optional JavaScript -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js">
+     </script>
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+     </script>
+     <script src="js/jquery.min.js"></script>
+ 
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+         integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous">
+     </script>
+ 
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+         integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous">
+     </script>
+     <script src="js/bootstrap.min.js"></script>
+     <script src="js/observers.js"></script>
+ </body>
+ 
+ </html>
 <body>
 
     <div class="header">

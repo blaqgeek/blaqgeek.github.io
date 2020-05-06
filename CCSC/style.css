@@ -26,6 +26,35 @@ body {
 
 
 /* Header section */
+.logo {
+  font-family: "Poppins", sans-serif;
+  color: #c6ae2a;
+  font-weight: 900;
+  font-size: 2.05rem;
+  padding: 0;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin-right: 2rem;
+}
+
+.logo span {
+  color: #fff;
+  display: block;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+} 
+
+.logo:hover {
+  text-decoration: none;
+  color: #c6ae2a;
+}
+
+.logo span:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
 .header {
   --text: #f4f4f4;
   --text-inverse: #333;
@@ -38,7 +67,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 5rem;
+  padding: 1.2rem 5rem;
   transition: background 250ms ease-in;
   background: var(--background);
   color: var(--text);
@@ -71,6 +100,10 @@ body {
 
 
 /* Navigation section */
+
+
+
+
 .nav-list {
   font-family: "Poppins", sans-serif;
   list-style: none;
@@ -454,9 +487,23 @@ aside {
   .header {
     display: flex;
     flex-direction: row-reverse;
-    padding: 0.5rem 1.3rem;
+    padding: 1.2rem 0;
   
   } 
+
+  .logo {
+    
+    font-size: 1.55rem;
+  
+  }
+  
+  .logo span {
+    font-weight: bolder;
+    font-size: 0.4rem;
+
+  } 
+  
+
 
   .carousel-item img {
     height: 400px;
@@ -466,7 +513,7 @@ aside {
     
     width: 35px;
     height: 20px;
-    margin: 2.1rem 2rem;
+    margin: 2rem 2rem;
     cursor: pointer;
   }
   .bar {
@@ -476,13 +523,22 @@ aside {
     display: flex;
     border-radius: 10px;
     transition: 0.3s ease;
+
   }
   #bar1 {
     transform: translateY(-4px);
-  }
+    -webkit-transform: translateY(-4px);
+    -moz-transform: translateY(-4px);
+    -ms-transform: translateY(-4px);
+    -o-transform: translateY(-4px);
+}
   #bar3 {
     transform: translateY(4px);
-  }
+    -webkit-transform: translateY(4px);
+    -moz-transform: translateY(4px);
+    -ms-transform: translateY(4px);
+    -o-transform: translateY(4px);
+}
 
   .menu-bg,
   .main-nav {
