@@ -1,0 +1,284 @@
+body {
+
+    font-family: 'Poppins', sans-serif;
+}
+
+/* header */
+/* .brand {
+    font-family: 'Poppins', sans-serif;
+    color: #191919;
+    font-size: 4rem;
+    font-weight: bold;
+} */
+
+.brand {
+    color: #001369;
+    font-weight: 900;
+    font-size: 2rem;
+    padding: 0;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.brand span {
+    display: block;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.brand:hover {
+    text-decoration: none;
+    color: #001369;
+}
+
+.icon i {
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    color: #fd5e00;
+}
+
+.bg-top {
+
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: -30px;
+}
+
+.cont {
+
+    font-size: 0.95rem;
+
+}
+
+.topper {
+    display: flex;
+}
+
+.topper1 {
+    margin-right: 120px;
+}
+
+.topper .text p {
+    margin-top: 0.3rem;
+    color: #7e7e7e;
+}
+
+.navbar .container {
+    background-color: #0c1127;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.nav-item {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.nav-link {
+    color: #fff;
+}
+
+
+.active {
+    color: #fd5e00;
+}
+
+
+
+.searchform .form-group {
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 0;
+    margin-bottom: 0;
+}
+
+.searchform .form-group .form-control {
+    background: transparent;
+    padding: 25px 0;
+    border: 1px solid #2e2e2e;
+    border-radius: 100px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    -o-border-radius: 100px;
+}
+
+.search {
+    background: transparent;
+    color: #7e7e7e;
+    border: none;
+
+}
+
+#carouselExampleCaptions {
+    margin-top: -10px;
+}
+
+/* showcase */
+.showcase {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+.bg1 {
+    background: #fd5e00;
+    font-weight: 500;
+}
+
+
+.bg2 {
+    background-color: #0c1127;
+    font-weight: 500;
+}
+
+.bg1 p,
+.bg2 p {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+.bg1 h3,
+.bg2 h3 {
+    color: #fff;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+.ftco-section {
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    padding: 7em 0;
+    position: relative;
+
+}
+
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+.ftco-counter .block-18 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.ftco-counter .text strong.number {
+    font-weight: 600;
+    font-size: 40px;
+    color: #fff;
+    display: block;
+}
+
+.ftco-counter .text span {
+    display: block;
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#section-counter {
+    position: relative;
+    z-index: 0;
+}
+
+#section-counter:after,
+#carouselExampleCaptions:after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: '';
+    z-index: -1;
+    opacity: .8;
+    background: #0d1128;
+    background: #0d1128;
+    background: -moz-linear-gradient(45deg, #0d1128 0%, #fd6100 100%);
+    background: -webkit-gradient(left bottom, right top, color-stop(0%, #0d1128), color-stop(100%, #fd6100));
+    background: -webkit-linear-gradient(45deg, #0d1128 0%, #fd6100 100%);
+    background: -o-linear-gradient(45deg, #0d1128 0%, #fd6100 100%);
+    background: -ms-linear-gradient(45deg, #0d1128 0%, #fd6100 100%);
+    background: linear-gradient(45deg, #0d1128 0%, #fd6100 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0d1128', endColorstr='#fd6100', GradientType=1);
+}
+
+.video {
+    width: 100%;
+    position: relative;
+}
+
+
+.icon-video {
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    -webkit-box-shadow: 0px 0px 34px -8px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 34px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 34px -8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    margin: 0 auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.icon-video span {
+    font-size: 30px;
+    color: #fd5f00;
+}
+
+.icon-video:hover {
+    text-decoration: none;
+}
+
+
+
+.ftco-counter {
+    overflow-x: hidden;
+    position: relative;
+}
+
+@media (max-width: 1199.98px) {
+    .ftco-counter {
+        background-position: top center !important;
+    }
+}
+
+.ftco-counter .img-video {
+    width: 100%;
+    display: block;
+}
+
+@media (max-width: 767.98px) {
+    .ftco-counter .img-video {
+        height: 300px;
+    }
+}
+
+
+
+@media(max-width: 768px) {
+    .navbar .container {
+        width: 700px;
+    }
+
+    .bg-top {
+        margin-bottom: 0;
+    }
+
+
+    .navbar .container {}
+}
