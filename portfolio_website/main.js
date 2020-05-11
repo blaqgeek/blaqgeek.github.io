@@ -1,9 +1,28 @@
 // Menubar on mobile screen
 $(document).ready(function(){
     $('.menu-toggle').click(function(){
-        $('.menu-toggle').toggleClass('active')
+        $('.menu-toggle').toggleClass('active');
         $('nav').toggleClass('active')
     });
+
+    $('nav ul li a').click(function(){
+    
+      $('nav').removeClass('active')
+  });
+
+  
+
+})
+
+
+
+// @mobile on the hero section, the bacground
+$(document).ready(function(){
+  $('.menu-toggle').click(function(){
+      $('.menu-toggle').toggleClass('active')
+      $('.fix').toggleClass('active')
+      $('.fix').addClass('nav-scrolled')
+  });
 
 })
 

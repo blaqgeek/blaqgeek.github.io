@@ -88,7 +88,16 @@ header a {
     color: #202737;
 }
 
+.nav-scrolled a:hover {
+    color: #202737;
+}
+
+
+
+
+
 .logo {
+    text-transform: uppercase;
     color: #fff;
     height: 4.5rem;
     font-size: 1.5rem;
@@ -105,7 +114,7 @@ header a {
 }
 
 .logo:hover {
-   
+    color: #fff;
     text-decoration: none;
 }
 
@@ -216,13 +225,15 @@ nav ul li a.active {
 }
 
 /* .img-abt {
-    
+   
     border: 2px solid #10151d;
-    background-image: url(./1.jpg);
+    background-image: url(/img/1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: 500px;
+    padding: 7px;
+    height: 475px;
+    
+   
 } */
 
 .img-abt img {
@@ -562,6 +573,11 @@ button.btn:hover i {
 @media(max-width: 768px) {
 
     /*  Header */
+        
+    header a {
+        color: #000000;
+    }
+
     .menu-toggle {
         display: block;
         width: 35px;
@@ -579,24 +595,26 @@ button.btn:hover i {
         width: 95%;
     }
 
+
     .menu-toggle:before {
         content: '\f0c9';
         font-family: fontAwesome;
         line-height: 40px;
     }
 
-    .menu-toggle.active:before {
+    /* .menu-toggle.active:before {
         content: '\f00d';
         font-family: fontAwesome;
 
-    }
+    } */
 
     nav {
         display: none;
+      
     }
 
     nav.active {
-
+   
         display: block;
         width: 100%;
     }
@@ -612,6 +630,11 @@ button.btn:hover i {
     nav.active ul li a:hover {
         color: #c25452;
         font-weight: bold;
+    }
+
+    .fix.active {
+        background: #fff;
+        color: #000000;
     }
 
     /* End of Header */
@@ -638,7 +661,7 @@ button.btn:hover i {
 
     .img-abt img {
         margin-left: -35px;
-        width: 285px;
+        width: 300px;
     }
 
     .skills-inner {
