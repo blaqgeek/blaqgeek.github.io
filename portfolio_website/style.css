@@ -244,7 +244,7 @@ nav ul li a.active {
     display: block;
     border: 2px solid #10151d;
     padding: 7px;
-    height: 500px;
+    height: auto;
     width: 360px;
     margin-left: -50px;
     margin-top: -10px;
